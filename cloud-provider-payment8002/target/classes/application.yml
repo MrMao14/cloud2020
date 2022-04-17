@@ -1,0 +1,36 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # Mysql驱动包
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://1.116.37.192:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root123
+    password: 123456111
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  # 所有Entity别名类所在包
+  type-aliases-package: com.mrmao.springcloud.entities
+
+eureka:
+  client:
+    # 表示将自己注册进EurekaServer
+    register-with-eureka: true
+    # 是否从EurekaServer抓取已有的注册信息，单点无所谓，集群必须为true配置ribbon负载均衡
+    fetch-registry: true
+    service-url:
+      # 单机版
+      #defaultZone: http://localhost:7001/eureka
+      # 集群版
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    # 设定服务名称
+    instance-id: payment8002
+    # 访问路径显示ip地址
+    prefer-ip-address: true
