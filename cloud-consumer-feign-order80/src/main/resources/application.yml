@@ -6,3 +6,12 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+feign:
+  client:
+    config:
+      default:
+        # 建立连接后从服务器读取到可用资源所用时间
+        connectTimeout: 5000
+        # 建立连接所用时间，网络正常情况下，两端连接所用时间
+        readTimeOut: 5000
