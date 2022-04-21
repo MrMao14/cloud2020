@@ -15,3 +15,7 @@ feign:
         connectTimeout: 5000
         # 建立连接所用时间，网络正常情况下，两端连接所用时间
         readTimeOut: 5000
+# Feign日志配置
+logging:
+  level:
+    com.mrmao.springcloud.service.PaymentFeignService: debug
