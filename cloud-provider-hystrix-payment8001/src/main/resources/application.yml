@@ -4,6 +4,14 @@ server:
 spring:
   application:
     name: cloud-provider-hystrix-payment
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # Mysql驱动包
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://1.116.37.192:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root123
+    password: 123456111
 
 eureka:
   client:
