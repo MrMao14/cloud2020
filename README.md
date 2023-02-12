@@ -18,6 +18,7 @@
 - [x] LoadBalancer
 
 ### 服务调用2
+声明式的WebService客户端，通过定义一个服务器接口在上面添加注解使用，通常结合Ribbon使用
 - [ ] Feign
 - [x] OpenFeign
 
